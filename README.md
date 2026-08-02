@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Public Grievance Platform
 
 > An AI-powered next-generation public grievance redressal platform inspired by CPGRAMS, designed to assist citizens and government officials using Natural Language Processing (NLP), Retrieval-Augmented Generation (RAG), semantic search, multilingual support, and predictive analytics.
@@ -78,3 +79,7 @@ Paras Parashar
 ## 📄 License
 
 This project is licensed under the MIT License.
+=======
+# ai-public-grievance-platform
+Next-generation AI platform for intelligent public grievance management inspired by CPGRAMS.
+>>>>>>> 95e8dd43da544a0ca350aec0972a9a528dbeef58
