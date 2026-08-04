@@ -422,3 +422,366 @@ Approved
 - Search functionality available.
 - Filter by complaint status and submission date.
 - Complaint details accessible.
+
+### FR-016 – Officer Dashboard
+
+**Description**
+
+The system shall provide Officers with a personalized dashboard displaying complaint statistics, assigned work, AI-generated insights, and recent complaint activity.
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Officer is authenticated.
+
+**Postconditions**
+
+- Dashboard displayed successfully.
+
+**Acceptance Criteria**
+
+- Assigned complaints displayed.
+- High-priority complaints highlighted.
+- Recently updated complaints displayed.
+- AI Insights panel visible.
+
+### FR-017 – View Assigned Complaints
+
+**Description**
+
+The system shall allow Officers to view all complaints assigned to them along with complaint status, priority, submission date, and AI-generated indicators.
+
+Authorized officers may also view unassigned or escalated complaints based on their permissions.
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Assigned complaints displayed.
+- Filters available.
+- Search available.
+- Complaint list updates dynamically.
+
+### FR-018 – AI Complaint Summary
+
+**Description**
+
+The system shall generate concise AI-powered summaries for each complaint to reduce the time required for officers to understand complaint details.
+
+The summary shall highlight:
+
+- Complaint overview
+- Key issues
+- Important dates
+- Mentioned locations
+- Supporting evidence
+- Suggested priority
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Summary generated successfully.
+- Officer can view original complaint.
+- AI summary available within a reasonable response time.
+
+### FR-019 – AI Officer Copilot
+
+**Description**
+
+The system shall provide an AI-powered Officer Copilot that proactively analyzes each complaint and presents contextual decision-support information through an integrated side panel.
+
+The AI Officer Copilot shall provide:
+
+- Complaint Summary
+- Priority Analysis
+- Relevant Government Policies (RAG)
+- Similar Resolved Cases
+- Evidence Review
+- Suggested Response Draft
+- Recommended Next Action
+
+The Officer shall also be able to ask custom questions related to the currently opened complaint.
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Officer is authenticated.
+- Complaint is opened.
+
+**Postconditions**
+
+- AI analysis generated successfully.
+- Officer may use AI recommendations while making the final decision.
+
+**Acceptance Criteria**
+
+- Copilot loads automatically with complaint.
+- AI responses remain specific to the opened complaint.
+- Officer can ask follow-up questions.
+- AI suggestions do not automatically change complaint status.
+
+### FR-020 – AI Resolution Assistant
+
+**Description**
+
+The system shall provide an AI-powered Resolution Assistant that supports Officers throughout the complaint resolution process by recommending appropriate actions, generating professional response drafts, identifying required verification steps, and explaining AI recommendations.
+
+The AI Resolution Assistant shall provide:
+
+- Recommended Next Action
+- Draft Resolution Response
+- Required Verification Checklist
+- Resolution Confidence Score
+- Explanation of AI Recommendations
+
+The AI shall act only as a decision-support tool. The final resolution shall always be reviewed and approved by the Officer.
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Officer is authenticated.
+- Complaint is opened.
+- AI Complaint Analysis has completed.
+
+**Postconditions**
+
+- AI-generated recommendations are available.
+- Officer may accept, modify, or reject AI suggestions.
+
+**Acceptance Criteria**
+
+- AI generates a recommended next action.
+- AI generates a professional draft response.
+- Verification checklist is displayed.
+- Officer can edit AI-generated content before submission.
+- AI never submits or closes a complaint automatically.
+
+### FR-021 – Similar Case Retrieval
+
+**Description**
+
+The system shall retrieve semantically similar historical complaints and their resolutions to assist Officers in making informed decisions.
+
+The retrieved cases shall include:
+
+- Complaint Summary
+- Resolution Status
+- Resolution Method
+- Assigned Department
+- Similarity Score
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Complaint is opened.
+- AI Similarity Engine is available.
+
+**Postconditions**
+
+- Similar cases displayed.
+
+**Acceptance Criteria**
+
+- Similar complaints retrieved successfully.
+- Similarity score displayed.
+- Officer can open previous cases.
+- Previous case information is read-only.
+
+### FR-022 – Complaint Status Management
+
+**Description**
+
+The system shall allow Officers to update the status of complaints throughout their lifecycle.
+
+Supported complaint statuses shall include:
+
+- Submitted
+- Under Review
+- Investigation in Progress
+- Awaiting Citizen Response
+- Resolved
+- Rejected
+- Closed
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Complaint assigned to Officer.
+
+**Postconditions**
+
+- Complaint status updated.
+- Citizen notified of status change.
+- Activity logged in complaint timeline.
+
+**Acceptance Criteria**
+
+- Status updated successfully.
+- Timeline updated.
+- Notification triggered.
+
+### FR-023 – Internal Officer Notes
+
+**Description**
+
+The system shall allow Officers to create, edit, and manage internal notes associated with complaints.
+
+Internal notes shall only be visible to authorized Officers and Administrators.
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Notes saved successfully.
+- Notes editable.
+- Notes hidden from Citizens.
+
+### FR-024 – Resolution Workflow
+
+**Description**
+
+The system shall guide Officers through a structured complaint resolution workflow supported by AI recommendations.
+
+The workflow shall include:
+
+- Complaint Review
+- Evidence Verification
+- Policy Review
+- AI Resolution Assistance
+- Officer Decision
+- Resolution Submission
+- Citizen Notification
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Workflow completed sequentially.
+- Mandatory verification completed.
+- Resolution recorded successfully.
+
+### FR-025 – Semantic Complaint Search
+
+**Description**
+
+The system shall provide semantic search capabilities that enable Officers to locate complaints using natural language queries instead of exact keywords.
+
+Example queries include:
+
+- "Electricity billing complaints"
+- "Water leakage in Delhi"
+- "Pending passport verification"
+
+**Actors**
+
+- Officer
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Natural language queries supported.
+- Relevant complaints returned.
+- Search results ranked by semantic relevance.
