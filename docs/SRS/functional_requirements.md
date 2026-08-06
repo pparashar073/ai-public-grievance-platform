@@ -785,3 +785,429 @@ Approved
 - Natural language queries supported.
 - Relevant complaints returned.
 - Search results ranked by semantic relevance.
+
+### FR-026 – Department Management
+
+**Description**
+
+The system shall allow Administrators to manage government departments by updating department information, activating or deactivating departments, configuring complaint routing rules, and assigning Officers.
+
+The system shall not allow deletion of departments containing complaint history.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Preconditions**
+
+- Administrator is authenticated.
+
+**Postconditions**
+
+- Department configuration updated.
+
+**Acceptance Criteria**
+
+- Department details editable.
+- Departments can be activated or deactivated.
+- Routing rules configurable.
+- Existing complaint history preserved.
+
+### FR-027 – Officer Management
+
+**Description**
+
+The system shall allow Administrators to create, update, activate, deactivate, and assign Officers to government departments.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Officer accounts created successfully.
+- Officer assignments updated.
+- Deactivated Officers cannot log in.
+- Officer information editable.
+
+### FR-028 – User Management
+
+**Description**
+
+The system shall allow Administrators to manage citizen accounts, including viewing profiles, disabling accounts involved in misuse, and reviewing account activity.
+
+Administrators shall not modify complaint content submitted by Citizens.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Citizen profiles accessible.
+- Accounts can be disabled.
+- Complaint ownership preserved.
+
+### FR-029 – Analytics Dashboard
+
+**Description**
+
+The system shall provide Administrators with a centralized dashboard displaying complaint statistics, department performance, complaint trends, and operational metrics.
+
+The dashboard shall include:
+
+- Complaint volume
+- Resolution rate
+- Average resolution time
+- Department-wise workload
+- Complaint category distribution
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Dashboard loads successfully.
+- Metrics displayed accurately.
+- Data filterable by department and time period.
+
+### FR-030 – AI Governance Dashboard
+
+**Description**
+
+The system shall provide Administrators with a dashboard for monitoring AI system performance, prediction quality, and Officer feedback.
+
+The dashboard shall display:
+
+- Department Recommendation Accuracy
+- Priority Prediction Accuracy
+- Duplicate Detection Accuracy
+- Officer Override Rate
+- AI Confidence Distribution
+- AI Decision Logs
+
+The dashboard shall support continuous evaluation of AI-assisted decision making.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- AI metrics displayed successfully.
+- Historical performance trends available.
+- Officer feedback statistics visible.
+
+### FR-031 – Audit Log Management
+
+**Description**
+
+The system shall maintain a secure audit log of all critical administrative actions, user activities, AI recommendations, and complaint status changes.
+
+Audit logs shall include:
+
+- User ID
+- Role
+- Timestamp
+- Action Performed
+- Affected Resource
+- Previous Value
+- Updated Value
+
+Audit logs shall be immutable and accessible only to authorized Administrators.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Administrative actions recorded.
+- AI recommendation changes logged.
+- Complaint status changes logged.
+- Audit logs cannot be modified by users.
+
+### FR-032 – System Configuration
+
+**Description**
+
+The system shall allow authorized Administrators to configure platform-wide settings including AI behavior, notification preferences, complaint categories, supported languages, and security parameters.
+
+**Actors**
+
+- Administrator
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Configuration changes saved successfully.
+- Changes reflected without affecting historical complaint data.
+- Unauthorized users cannot access system settings.
+
+### FR-033 – Complaint Classification
+
+**Description**
+
+The system shall automatically classify complaints into predefined categories using Natural Language Processing (NLP).
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Complaint category predicted successfully.
+- Classification confidence available.
+- Officer may override classification.
+
+### FR-034 – Priority Prediction
+
+**Description**
+
+The system shall estimate complaint priority based on complaint content, historical patterns, supporting evidence, and predefined business rules.
+
+Priority Levels:
+
+- Low
+- Medium
+- High
+- Critical
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Priority generated.
+- Confidence score displayed.
+- Officer may override prediction.
+
+### FR-035 – Department Recommendation
+
+**Description**
+
+The AI Engine shall recommend the most appropriate government department for each complaint based on semantic analysis.
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Department recommendation generated.
+- Confidence score available.
+- Manual override supported.
+
+### FR-036 – Duplicate Complaint Detection
+
+**Description**
+
+The AI Engine shall identify semantically similar complaints to reduce duplicate grievance submissions.
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+High
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Similar complaints detected.
+- Similarity score displayed.
+- Duplicate warning shown before submission.
+
+### FR-037 – Multilingual Translation
+
+**Description**
+
+The system shall support multilingual complaint processing by translating complaints between supported Indian languages and English while preserving meaning.
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Translation completed successfully.
+- Original complaint retained.
+- Officers may view both original and translated versions.
+
+### FR-038 – Spam and Misuse Detection
+
+**Description**
+
+The system shall detect spam, abusive, or malicious complaint submissions and flag them for administrative review.
+
+The system shall not automatically reject complaints solely based on AI predictions.
+
+**Actors**
+
+- AI Engine
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Suspicious complaints identified.
+- Complaints flagged for review.
+- Human review required before rejection.
+
+### FR-039 – Notification Management
+
+**Description**
+
+The system shall notify Citizens and Officers regarding important complaint events through email and in-application notifications.
+
+Supported events include:
+
+- Complaint Submitted
+- Complaint Assigned
+- Status Updated
+- Complaint Resolved
+
+**Actors**
+
+- Citizen
+- Officer
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Notifications sent successfully.
+- Notification history available.
+- Failed notifications logged.
+
+### FR-040 – In-App Notification Center
+
+**Description**
+
+The system shall provide an in-application notification center allowing users to view, manage, and acknowledge system notifications.
+
+**Actors**
+
+- Citizen
+- Officer
+- Administrator
+
+**Priority**
+
+Medium
+
+**Status**
+
+Approved
+
+**Acceptance Criteria**
+
+- Notifications displayed chronologically.
+- Read and unread status supported.
+- Users can mark notifications as read.
+
